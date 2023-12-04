@@ -73,9 +73,7 @@
             return this.send(Command.led(camera, mode, color));
         }
         newMeasurement() {
-            setTimeout(() => {
-                return this.send(Command.newMeasurement());
-            }, 5000);
+            return this.send(Command.newMeasurement());
         }
         qtmVersion() {
             return this.send(Command.qtmVersion());
@@ -90,7 +88,9 @@
             return this.send(Command.setParameters.apply(Command, arguments));
         }
         startCapture() {
-            return this.send(Command.startCapture());
+            setTimeout(() => {
+                return this.send(Command.startCapture());
+            }, 5000);
         }
         stopCapture() {
             return this.send(Command.stopCapture());
