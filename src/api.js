@@ -128,7 +128,7 @@
 
             if (arguments.length < 1) port = 22223;
 
-            if (arguments.length < 2) host = "192.168.7.100";
+            if (arguments.length < 2) host = "localhost";
 
             if (arguments.length < 3) {
                 major = 1;
@@ -473,8 +473,7 @@
             if (
                 !_.isUndefined(options.udpPort) &&
                 (_.isUndefined(options.udpAddress) ||
-                    options.updAddress === "localhost" ||
-                    options.udpAddress === "192.168.7.100")
+                    options.updAddress === "localhost")
             )
                 this.setupUdp.call(this, options.udpPort);
 
