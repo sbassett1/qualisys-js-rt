@@ -90,7 +90,7 @@
         startCapture() {
             setTimeout(() => {
                 return this.send(Command.startCapture());
-            }, 3000);
+            }, 1500);
         }
         stopCapture() {
             return this.send(Command.stopCapture());
