@@ -73,7 +73,9 @@
             return this.send(Command.led(camera, mode, color));
         }
         newMeasurement() {
-            return this.send(Command.newMeasurement());
+            setTimeout(() => {
+                return this.send(Command.newMeasurement());
+            }, 5000);
         }
         qtmVersion() {
             return this.send(Command.qtmVersion());
