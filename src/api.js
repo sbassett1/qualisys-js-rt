@@ -88,9 +88,7 @@
             return this.send(Command.setParameters.apply(Command, arguments));
         }
         startCapture() {
-            setTimeout(() => {
-                return this.send(Command.startCapture());
-            }, 1500);
+            return this.send(Command.startCapture());
         }
         stopCapture() {
             return this.send(Command.stopCapture());
